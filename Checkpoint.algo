@@ -1,0 +1,38 @@
+ALGORITHM Sentence
+VAR
+    charcounter : INTEGER:=1;
+    wordcounter : INTEGER:=1;
+    vowelscounter : INTEGER:=0;
+
+BEGIN
+    WHILE (c<>'.') DO
+       
+       Read(c);
+      
+      charcounter := charcounter + 1;
+
+
+      IF (c=' ') THEN
+        
+
+        wordcounter := wordcounter + 1;
+        
+       
+    
+     END_IF
+
+     // check if the char c is vowel
+
+      IF ((c = 'a') OR (c = 'e') OR (c = 'i') OR (c = 'o') OR (c = 'u') OR (c = 'y')) THEN
+        
+         vowelscounter := vowelscounter + 1 ;
+
+      END_IF   
+
+    END_WHILE
+
+    Write ( "The length of the sentence :", charcounter);
+    Write ( " The number of words in the sentence :", wordcounter);
+    Write ("The number of vowels :", vowelscounter);
+
+END
